@@ -1,4 +1,4 @@
-/* AI智能获客助手 · 宣传网站交互脚本 */
+/* 拾客 Shike AI 智能获客助手 · 宣传网站交互脚本 */
 
 (function () {
   "use strict";
@@ -90,6 +90,59 @@
     backTop.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+  }
+
+  /* ---------- GitHub Star 数（Hero 徽章） ---------- */
+  var badgeStars = document.getElementById("badgeStars");
+  if (badgeStars) {
+    var REPO_API = "https://api.github.com/repos/yuezu1026/sales-agent";
+    var CACHE_KEY = "sales_agent_repo_stars";
+    var CACHE_TTL = 6 * 60 * 60 * 1000; // 缓存 6 小时，避免触发 GitHub 限流
+
+    var renderStars = function (count) {
+      if (typeof count !== "number") return;
+      var text =
+        count >= 1000
+          ? (count / 1000).toFixed(1).replace(/\.0$/, "") + "k"
+          : String(count);
+      badgeStars.textContent = "⭐ " + text;
+      badgeStars.classList.add("show");
+    };
+
+    var cached = null;
+    try {
+      cached = JSON.parse(localStorage.getItem(CACHE_KEY) || "null");
+    } catch (e) {
+      cached = null;
+    }
+
+    if (cached && Date.now() - cached.time < CACHE_TTL) {
+      // 命中缓存直接渲染，不发请求
+      renderStars(cached.count);
+    } else {
+      fetch(REPO_API, { headers: { Accept: "application/vnd.github+json" } })
+        .then(function (res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          return res.json();
+        })
+        .then(function (data) {
+          renderStars(data.stargazers_count);
+          try {
+            localStorage.setItem(
+              CACHE_KEY,
+              JSON.stringify({
+                count: data.stargazers_count,
+                time: Date.now(),
+              }),
+            );
+          } catch (e) {
+            /* 忽略存储失败 */
+          }
+        })
+        .catch(function () {
+          // 仓库未公开 / 网络失败 / 限流：静默隐藏 Star 数，徽章不受影响
+        });
+    }
   }
 
   /* ---------- 导航滚动加深背景 ---------- */

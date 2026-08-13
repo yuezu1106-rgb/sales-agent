@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI智能获客助手 - 端到端 AI 销售智能体</title>
+    <title>拾客 Shike AI 智能获客助手 - 端到端 AI 销售智能体</title>
     <meta
       name="description"
-      content="AI智能获客助手：潜客挖掘 → 个性化触达 → 客户转化。让 AI 替你跑完获客全流程，本地部署，数据自主可控。"
+      content="拾客 Shike AI 智能获客助手：潜客挖掘 → 个性化触达 → 客户转化。SaaS 多租户数据完全隔离，代码 100% 开源，可云端使用也可自行部署。"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- 字体使用系统自带字体栈（见 css/style.css --font），无外部字体请求 -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -17,7 +17,9 @@
       <div class="container nav-inner">
         <a class="nav-logo" href="#top">
           <span class="logo-mark">⚡</span>
-          <span class="logo-text">AI智能获客助手</span>
+          <span class="logo-text"
+            >拾客 Shike AI<span class="logo-sub">智能获客助手</span></span
+          >
         </a>
         <nav class="nav-links" id="navLinks">
           <a href="#pain">痛点</a>
@@ -26,6 +28,12 @@
           <a href="#why">优势</a>
           <a href="#audience">适用对象</a>
           <a href="#faq">常见问题</a>
+          <a
+            href="https://github.com/yuezu1026/sales-agent"
+            target="_blank"
+            rel="noopener"
+            >GitHub 源码</a
+          >
         </nav>
         <a class="btn btn-primary nav-cta" href="/app/login">免费试用</a>
         <button class="nav-toggle" id="navToggle" aria-label="打开菜单">
@@ -38,7 +46,14 @@
     <section class="hero" id="top">
       <div class="hero-bg"></div>
       <div class="container hero-inner">
-        <div class="hero-badge reveal">端到端 AI 销售智能体 · 本地部署</div>
+        <div class="hero-badge reveal">
+          SaaS 租户数据隔离 · 代码 100% 开源
+          <span
+            class="badge-stars"
+            id="badgeStars"
+            title="GitHub Star 数"
+          ></span>
+        </div>
         <h1 class="reveal">
           让 AI 替你跑完<br /><span class="grad-text">获客全流程</span>
         </h1>
@@ -49,6 +64,13 @@
         </p>
         <div class="hero-actions reveal">
           <a class="btn btn-primary btn-lg" href="/app/login">立即免费试用</a>
+          <a
+            class="btn btn-ghost btn-lg"
+            href="https://github.com/yuezu1026/sales-agent"
+            target="_blank"
+            rel="noopener"
+            >⭐ 查看开源代码</a
+          >
           <a class="btn btn-ghost btn-lg" href="#features">了解功能</a>
         </div>
         <div class="hero-stats reveal">
@@ -62,11 +84,11 @@
           </div>
           <div class="stat">
             <div class="stat-num">100<span>%</span></div>
-            <div class="stat-label">数据本地留存</div>
+            <div class="stat-label">租户数据隔离</div>
           </div>
           <div class="stat">
-            <div class="stat-num">1<span>键</span></div>
-            <div class="stat-label">部署开箱即用</div>
+            <div class="stat-num">100<span>%</span></div>
+            <div class="stat-label">代码完全开源</div>
           </div>
         </div>
       </div>
@@ -112,7 +134,9 @@
             <div class="pain-icon">🔓</div>
             <h3>担心数据外泄</h3>
             <p>客户资料交给第三方 SaaS，心里总是不踏实。</p>
-            <div class="pain-fix">✅ 本地部署，数据 100% 留在自己服务器</div>
+            <div class="pain-fix">
+              ✅ 租户级数据隔离，开源可审计，也可自部署
+            </div>
           </div>
           <div class="pain-card reveal">
             <div class="pain-icon">💸</div>
@@ -228,10 +252,8 @@
           <div class="loop-card reveal">
             <div class="loop-step">01</div>
             <div class="loop-icon">⚙️</div>
-            <h3>激活配置</h3>
-            <p>
-              激活码激活开箱即用，填写 AI 模型 Key 与发件邮箱，保存立即生效。
-            </p>
+            <h3>注册配置</h3>
+            <p>注册租户即刻开通，填写 AI 模型 Key 与发件邮箱，保存立即生效。</p>
           </div>
           <div class="loop-card reveal">
             <div class="loop-step">02</div>
@@ -269,16 +291,24 @@
       <div class="container">
         <div class="section-head reveal">
           <div class="section-tag light">为什么选择我们</div>
-          <h2>提效不越权，数据不离开你</h2>
-          <p>AI 负责干活，你负责拍板；数据留在本地，安心又合规。</p>
+          <h2>提效不越权，数据只属于你</h2>
+          <p>AI 负责干活，你负责拍板；租户数据严格隔离，开源透明可审计。</p>
         </div>
         <div class="why-grid">
           <div class="why-card reveal">
             <div class="why-icon">🔒</div>
-            <h3>数据自主可控</h3>
+            <h3>租户数据隔离</h3>
             <p>
-              本地部署软件，客户资料、沟通记录全部存在你自己的服务器，不经第三方
-              SaaS 中转，只有 AI 推理走云端。
+              SaaS
+              多租户架构，每个租户的客户资料、沟通记录严格隔离、互不可见；敏感配置加密存储，只有
+              AI 推理走云端。
+            </p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon">📖</div>
+            <h3>100% 开源</h3>
+            <p>
+              代码完全开源，后续升级的功能也全部开源，透明可审计；想自己部署？拉下代码一条命令就能跑。
             </p>
           </div>
           <div class="why-card reveal">
@@ -307,7 +337,8 @@
             <div class="why-icon">🚀</div>
             <h3>开箱即用</h3>
             <p>
-              一条命令部署，内置数据库与全部依赖，无需复杂运维，快速上线开始获客。
+              云端 SaaS
+              注册即用，零运维秒上手；选择自部署也简单，一条命令拉起全套环境。
             </p>
           </div>
         </div>
@@ -319,7 +350,7 @@
       <div class="container">
         <div class="section-head reveal">
           <div class="section-tag">适用对象</div>
-          <h2>谁在用 AI智能获客助手？</h2>
+          <h2>谁在用拾客 Shike AI？</h2>
           <p>
             任何需要持续获客的业务团队，都值得拥有一支不知疲倦的 AI 获客军团。
           </p>
@@ -369,9 +400,10 @@
             </button>
             <div class="faq-a">
               <p>
-                安全。系统是本地部署软件，客户资料、跟进记录、邮件往来全部存储在你自己的服务器上，不经任何第三方
-                SaaS 中转；只有 AI 文本推理调用云端大模型 API，敏感配置（如 API
-                Key）加密存储。
+                安全。系统采用 SaaS
+                多租户架构，每个租户的客户资料、跟进记录、邮件往来严格隔离、互不可见；敏感配置（如
+                API Key）加密存储，只有 AI 文本推理调用云端大模型 API。代码 100%
+                开源可审计，追求极致数据自主的团队还可以拉取源码自行部署。
               </p>
             </div>
           </div>
@@ -388,12 +420,26 @@
           </div>
           <div class="faq-item reveal">
             <button class="faq-q">
-              <span>需要技术团队才能部署吗？</span>
+              <span>必须自己部署吗？需要技术团队吗？</span>
               <span class="faq-arrow">＋</span>
             </button>
             <div class="faq-a">
               <p>
-                不需要。系统提供一键部署方案，内置数据库与全部依赖，按文档几条命令即可上线；激活码激活后开箱即用。
+                不需要。默认使用云端
+                SaaS，注册租户即可开箱即用，零运维。系统完全开源，如果你想把数据握在自己手里，也可以拉取源码自行部署——内置数据库与全部依赖，按文档几条命令即可上线。
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-q">
+              <span>代码是真的完全开源吗？后续功能也开源？</span>
+              <span class="faq-arrow">＋</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                是的。系统代码 100% 开源在
+                GitHub，后续升级的所有功能也全部开源，随时可以查看、审计甚至二次开发。开源不影响你使用云端
+                SaaS 服务——两种模式任选：云端省心，自部署自主。
               </p>
             </div>
           </div>
@@ -442,9 +488,16 @@
     <section class="cta" id="contact">
       <div class="container cta-inner reveal">
         <h2>准备好让 AI 替你获客了吗？</h2>
-        <p>预约一次演示，看看 AI智能获客助手如何为你的团队持续带来优质客户。</p>
+        <p>预约一次演示，看看拾客 Shike AI 如何为你的团队持续带来优质客户。</p>
         <div class="hero-actions">
           <a class="btn btn-primary btn-lg" href="/app/login">🚀 免费试用</a>
+          <a
+            class="btn btn-light btn-lg"
+            href="https://github.com/yuezu1026/sales-agent"
+            target="_blank"
+            rel="noopener"
+            >⭐ 获取开源代码</a
+          >
           <a class="btn btn-light btn-lg" href="mailto:39002818@qq.com"
             >📮 邮件联系我们</a
           >
@@ -457,8 +510,20 @@
       <div class="container footer-inner">
         <div class="footer-brand">
           <span class="logo-mark">⚡</span>
-          <span class="logo-text">AI智能获客助手</span>
+          <span class="logo-text"
+            >拾客 Shike AI<span class="logo-sub">智能获客助手</span></span
+          >
           <p>端到端 AI 销售智能体<br />潜客挖掘 → 个性化触达 → 客户转化</p>
+          <p>
+            💻 代码完全开源：
+            <a
+              class="footer-repo"
+              href="https://github.com/yuezu1026/sales-agent"
+              target="_blank"
+              rel="noopener"
+              >github.com/yuezu1026/sales-agent</a
+            >
+          </p>
         </div>
         <div class="footer-col">
           <h4>产品</h4>
@@ -472,17 +537,17 @@
           <a href="#faq">常见问题</a>
           <a href="#contact">联系我们</a>
           <a
-            href="https://github.com/yuezu1026/ai-customer"
+            href="https://github.com/yuezu1026/sales-agent"
             target="_blank"
             rel="noopener"
-            >产品仓库</a
+            >GitHub 开源仓库</a
           >
         </div>
       </div>
       <div class="footer-bottom">
         <p>
-          © 2026 AI智能获客助手 · 让每一个销售团队，都拥有一支不知疲倦的 AI
-          获客军团
+          © 2026 拾客 Shike AI 智能获客助手 ·
+          让每一个销售团队，都拥有一支不知疲倦的 AI 获客军团
         </p>
       </div>
     </footer>
