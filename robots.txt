@@ -1,0 +1,8 @@
+# 拾客 Shike AI 宣传站 robots 规则
+User-agent: *
+Allow: /
+# 产品应用与 API 不需要收录
+Disallow: /app/
+Disallow: /api/
+
+Sitemap: https://www.sales-agent.top/sitemap.xml

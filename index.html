@@ -3,13 +3,149 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>拾客 Shike AI 智能获客助手 - 端到端 AI 销售智能体</title>
+    <title>
+      拾客 Shike AI 智能获客助手 - AI 获客软件 | B2B 外贸客户开发工具
+    </title>
     <meta
       name="description"
-      content="拾客 Shike AI 智能获客助手：潜客挖掘 → 个性化触达 → 客户转化。SaaS 多租户数据完全隔离，代码 100% 开源，可云端使用也可自行部署。"
+      content="拾客 Shike AI 是端到端 AI 获客软件：AI 自动挖掘潜客、客户画像打分、个性化开发信生成、收件箱智能跟进，跑通 B2B 外贸客户开发全流程。SaaS 租户数据完全隔离，代码 100% 开源，可云端使用也可自行部署。"
     />
+    <meta
+      name="keywords"
+      content="AI获客,智能获客,AI获客软件,B2B获客工具,外贸客户开发,潜客挖掘,AI开发信,客户画像,获客系统,拾客,Shike AI"
+    />
+    <link rel="canonical" href="https://www.sales-agent.top/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph（微信/社交平台分享卡片） -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="拾客 Shike AI" />
+    <meta
+      property="og:title"
+      content="拾客 Shike AI 智能获客助手 - 让 AI 替你跑完获客全流程"
+    />
+    <meta
+      property="og:description"
+      content="AI 自动挖掘潜客 → 画像打分 → 个性化触达 → 智能跟进。SaaS 租户数据隔离，代码 100% 开源，可云端使用也可自行部署。"
+    />
+    <meta property="og:url" content="https://www.sales-agent.top/" />
+    <meta
+      property="og:image"
+      content="https://www.sales-agent.top/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="拾客 Shike AI 智能获客助手 - 让 AI 替你跑完获客全流程"
+    />
+    <meta
+      name="twitter:description"
+      content="AI 自动挖掘潜客 → 画像打分 → 个性化触达 → 智能跟进。SaaS 租户数据隔离，代码 100% 开源。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.sales-agent.top/og-image.png"
+    />
+
     <!-- 字体使用系统自带字体栈（见 css/style.css --font），无外部字体请求 -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- 结构化数据：软件应用 + FAQ（争取搜索引擎富摘要） -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "拾客 Shike AI 智能获客助手",
+            "alternateName": "Shike AI",
+            "url": "https://www.sales-agent.top/",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web, Windows, Linux, macOS",
+            "description": "端到端 AI 获客系统：潜客挖掘、RAG 客户画像打分、AI 个性化邮件生成、智能收件箱跟进，覆盖 B2B 获客全流程。SaaS 多租户数据隔离，代码 100% 开源，支持自行部署。",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "CNY",
+              "description": "开源代码免费获取，云端 SaaS 注册试用"
+            },
+            "featureList": [
+              "潜客挖掘",
+              "RAG 客户画像",
+              "客户管理 CRM",
+              "AI 个性化邮件",
+              "智能收件箱",
+              "微信沟通工作台"
+            ],
+            "sameAs": ["https://github.com/yuezu1026/sales-agent"]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "我们的客户数据安全吗？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "安全。系统采用 SaaS 多租户架构，每个租户的客户资料、跟进记录、邮件往来严格隔离、互不可见；敏感配置（如 API Key）加密存储，只有 AI 文本推理调用云端大模型 API。代码 100% 开源可审计，追求极致数据自主的团队还可以拉取源码自行部署。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "AI 会不会乱发邮件、骚扰客户？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "不会。所有邮件必须人工确认后才发送；系统内置每日发送限频，正文自动追加退订链接，已退订邮箱自动拦截，合规可控。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "必须自己部署吗？需要技术团队吗？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "不需要。默认使用云端 SaaS，注册租户即可开箱即用，零运维。系统完全开源，如果你想把数据握在自己手里，也可以拉取源码自行部署——内置数据库与全部依赖，按文档几条命令即可上线。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "代码是真的完全开源吗？后续功能也开源？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "是的。系统代码 100% 开源在 GitHub，后续升级的所有功能也全部开源，随时可以查看、审计甚至二次开发。开源不影响你使用云端 SaaS 服务——两种模式任选：云端省心，自部署自主。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "「画像分」是怎么算出来的？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "你导入历史成交客户后，系统会构建画像库；每个新潜客的公司名、行业、区域、规模等特征会与画像库做相似度计算，得到 0-100 分。分数越高，说明越接近你的优质客户特征，值得优先跟进。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "AI 的使用成本高吗？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "成本透明可控。系统按真实 token 用量统计每次 AI 调用的成本，用量看板随时查看；模型单价可在系统设置中自行调整，按需选择高性价比模型。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "支持哪些沟通渠道？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "目前支持邮件（SMTP 发送 + 收件箱抓取回复）与微信沟通工作台（消息记录沉淀 + AI 回复建议），邮件之外的沟通也不丢失。"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- 导航栏 -->

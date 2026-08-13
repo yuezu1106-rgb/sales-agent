@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+        background: #0d1f18;
+        color: #fff;
+        position: relative;
+      }
+      .bg {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            700px 350px at 15% 0%,
+            rgba(15, 191, 127, 0.28),
+            transparent 60%
+          ),
+          radial-gradient(
+            600px 300px at 90% 100%,
+            rgba(52, 227, 158, 0.16),
+            transparent 60%
+          );
+      }
+      .wrap {
+        position: relative;
+        height: 100%;
+        padding: 72px 84px;
+        display: flex;
+        flex-direction: column;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+      .mark {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, #0fbf7f, #0aa86e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 34px;
+        box-shadow: 0 6px 24px rgba(15, 191, 127, 0.45);
+      }
+      .brand-name {
+        font-size: 30px;
+        font-weight: 700;
+      }
+      .brand-sub {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-left: 14px;
+        padding-left: 14px;
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+      }
+      h1 {
+        margin-top: 64px;
+        font-size: 72px;
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: 2px;
+      }
+      .grad {
+        background: linear-gradient(120deg, #34e39e, #7ee8bd 55%, #b6f5da);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .sub {
+        margin-top: 28px;
+        font-size: 26px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .tags {
+        margin-top: auto;
+        display: flex;
+        gap: 16px;
+      }
+      .tag {
+        padding: 12px 26px;
+        border-radius: 999px;
+        font-size: 22px;
+        font-weight: 600;
+        color: #7ee8bd;
+        background: rgba(15, 191, 127, 0.14);
+        border: 1px solid rgba(15, 191, 127, 0.45);
+      }
+      .url {
+        margin-left: auto;
+        align-self: flex-end;
+        font-size: 22px;
+        color: rgba(255, 255, 255, 0.55);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="wrap">
+      <div class="brand">
+        <div class="mark">⚡</div>
+        <div class="brand-name">
+          拾客 Shike AI<span class="brand-sub">智能获客助手</span>
+        </div>
+      </div>
+      <h1>让 AI 替你跑完<br /><span class="grad">获客全流程</span></h1>
+      <div class="sub">潜客挖掘 → 个性化触达 → 客户转化，一个系统全部搞定</div>
+      <div class="tags">
+        <span class="tag">SaaS 租户数据隔离</span>
+        <span class="tag">代码 100% 开源</span>
+        <span class="tag">可自部署</span>
+        <span class="url">www.sales-agent.top</span>
+      </div>
+    </div>
+  </body>
+</html>

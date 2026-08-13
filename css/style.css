@@ -168,6 +168,7 @@ a {
   font-size: 14px;
   padding: 7px 12px;
   border-radius: 8px;
+  white-space: nowrap;
   transition: all 0.2s;
 }
 .nav-links a:hover {
@@ -798,24 +799,6 @@ a {
 
 /* ---------- 响应式 ---------- */
 @media (max-width: 1024px) {
-  .hero h1 {
-    font-size: 44px;
-  }
-  .pain-grid,
-  .feature-grid,
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .loop-grid,
-  .audience-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .hero-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
   .nav-links {
     position: fixed;
     top: 64px;
@@ -843,6 +826,24 @@ a {
     display: none;
   }
 
+  .hero h1 {
+    font-size: 44px;
+  }
+  .pain-grid,
+  .feature-grid,
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .loop-grid,
+  .audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
   .hero {
     padding: 120px 0 70px;
   }
