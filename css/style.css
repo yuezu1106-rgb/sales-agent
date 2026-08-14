@@ -608,6 +608,90 @@ a {
   color: var(--ink-3);
 }
 
+/* ---------- 定制开发 ---------- */
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 48px;
+}
+.custom-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 30px 26px;
+  transition:
+    transform 0.25s,
+    background 0.25s,
+    border-color 0.25s;
+}
+.custom-card:hover {
+  transform: translateY(-4px);
+  background: rgba(15, 191, 127, 0.09);
+  border-color: rgba(15, 191, 127, 0.4);
+}
+.custom-icon {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+.custom-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #eafff5;
+}
+.custom-card p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+}
+.custom-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+.custom-step {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 26px 22px 22px;
+}
+.custom-step-num {
+  font-size: 34px;
+  font-weight: 800;
+  color: rgba(15, 191, 127, 0.55);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.custom-step h4 {
+  font-size: 16px;
+  color: #eafff5;
+  margin-bottom: 6px;
+}
+.custom-step p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.custom-cta {
+  text-align: center;
+  padding: 36px 24px;
+  border-radius: var(--radius-lg);
+  background: rgba(15, 191, 127, 0.1);
+  border: 1px solid rgba(15, 191, 127, 0.3);
+}
+.custom-cta > p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #eafff5;
+  margin-bottom: 20px;
+}
+.custom-cta-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* ---------- FAQ ---------- */
 .faq-list {
   display: flex;
@@ -831,11 +915,15 @@ a {
   }
   .pain-grid,
   .feature-grid,
-  .why-grid {
+  .why-grid,
+  .custom-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .loop-grid,
   .audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .custom-flow {
     grid-template-columns: repeat(2, 1fr);
   }
   .hero-stats {
@@ -868,6 +956,8 @@ a {
   .why-grid,
   .loop-grid,
   .audience-grid,
+  .custom-grid,
+  .custom-flow,
   .hero-stats {
     grid-template-columns: 1fr;
   }
