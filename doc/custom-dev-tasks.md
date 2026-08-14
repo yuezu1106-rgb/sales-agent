@@ -47,6 +47,19 @@
 - [x] 锚点跳转：导航/底部 CTA/汉堡菜单 → #custom 均正常（top=0，与 #faq 等旧板块行为一致）；移动端点击后菜单自动收起
 - [x] JSON-LD 新增 Service 结构化数据 + FAQPage 新增定制问答，语法合法
 
-## 五、交付
+## 五、部署记录（2026-08-14）
+
+- 目标：43.153.229.106 → `/var/www/sales-agent/`（Nginx HTTPS 终结，sales-agent.top）
+- 步骤：scp 上传 index.html + css/style.css → 备份旧文件（.bak-20260814）→ 替换 → chown www-data
+- 验证：curl 首页 200（36493B）、含 id="custom"、新 CSS 含 .custom-grid、HTTP→HTTPS 301 正常；浏览器线上 DOM 测量无溢出无重叠（6 卡片/4 步骤/8 FAQ）
+
+### 发现并修复：静态资源缓存导致发版后新旧混杂
+
+- **问题**：nginx 对 css/js 配 `expires 1h`，但文件名无指纹 → 发版后老访客最长 1 小时看到“新 HTML + 旧 CSS”，定制板块无 grid 布局、卡片重叠
+- **修复**：index.html 中 css/js 引用加版本参数 `?v=20260814`（HTML 本身 no-cache，新版本号立即生效强制绕过缓存）
+- **后续约定**：每次改 css/js 后，同步更新 index.html 中的 `?v=` 版本号（建议用发版日期）
+
+## 六、交付
 
 - 更新后的宣传网站（index.html + css）与 README.md、本任务文件
+- 已部署至 https://www.sales-agent.top/（含定制开发板块，线上验证通过）

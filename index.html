@@ -51,7 +51,8 @@
     />
 
     <!-- 字体使用系统自带字体栈（见 css/style.css --font），无外部字体请求 -->
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- ?v= 版本号：文件名无指纹，靠版本参数让发版后的新 CSS 立即绕过浏览器/nginx 缓存 -->
+    <link rel="stylesheet" href="css/style.css?v=20260814" />
 
     <!-- 结构化数据：软件应用 + FAQ（争取搜索引擎富摘要） -->
     <script type="application/ld+json">
@@ -822,6 +823,6 @@
     </footer>
 
     <button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=20260814"></script>
   </body>
 </html>
